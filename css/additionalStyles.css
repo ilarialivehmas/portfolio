@@ -1,0 +1,41 @@
+/* css stylesheet */
+
+
+
+
+
+
+html {
+  background-color: #a9b5c7;
+  font-family: "Raleway", sans-serif !important;
+}
+body{
+    margin: 20vh 20vw 10vh 20vw;
+}
+
+.banner {
+  margin: auto;
+  text-align: center;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-row-gap: 10vh;
+  margin:auto;
+
+
+}
+.grid-container img {
+  width: 20vw;
+  height: auto;
+
+}
+.firstLayer {
+  background-color: #a9b5c7;
+}
+.secondLayer{
+  background-color: #a9b5c7;
+}
