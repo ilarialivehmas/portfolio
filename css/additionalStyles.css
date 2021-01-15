@@ -1,41 +1,68 @@
 /* css stylesheet */
-
+/*
+variavaruus
+ruusu: hsla(356, 65%, 23%, 1)
+turkoosi:hsla(186, 70%, 25%, 1)
+kirkasvalkoinen: hsla(239,100%,98%,1)
+pronssi:hsla(28, 62%, 54%, 1)
+messinki:hsla(44, 97%, 61%, 1)
+valkokulta: hsla(51, 82%, 80%, 1)
+*/
 
 
 
 
 
 html {
-  background-color: #a9b5c7;
-  font-family: "Raleway", sans-serif !important;
+    background-color: hsla(356, 65%, 23%, 1);
+    font-family: "Raleway", sans-serif !important;
 }
 body{
-    margin: 20vh 20vw 10vh 20vw;
-}
+    margin: 15vh 14vw 0vh 14vw;
+    background-image: linear-gradient(to bottom, hsla(239,100%,98%,1), hsla(186, 70%, 25%, 1));
+    /* valoefektit */
+    box-shadow: 0vw 3vh 12vh 9vw hsla(28, 62%, 54%, 1),0vw 2vh 7vh 3vw hsla(44, 97%, 61%, 1),0vw 1vh 3vh 2vw hsla(51, 82%, 80%, 1);
+    border-radius: 2vw 2vw 0vw 0vw;
 
+
+
+}
 .banner {
-  margin: auto;
-  text-align: center;
+    padding: 6vh 3vw;
+    text-align: center;
+}
+.banner h1{
+    font-size: 2.3em;
+}
+.banner h2{
+    font-size: 1.5em;
+}
+.container{
+    display: block;
+
 }
 
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto;
-  grid-row-gap: 10vh;
-  margin:auto;
-
+.content{
+    column-count: 2;
+    padding:  10vh 0vw 10vh 0vw;
+    font-size: 0.85em;
+    border-style: solid;
+    border-width: 0vw 0vw 0vw 2vw;
 
 }
-.grid-container img {
-  width: 20vw;
-  height: auto;
+.contentElement{
+    padding-left: 3vw;
+}
+
+.content img {
+    width: 20vw;
+    height: auto;
 
 }
+
 .firstLayer {
-  background-color: #a9b5c7;
+    background-color: hsla(28, 62%, 54%, 0.05);
 }
 .secondLayer{
-  background-color: #a9b5c7;
+    background-color: hsla(28, 62%, 54%, 0.05);
 }
