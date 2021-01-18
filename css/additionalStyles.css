@@ -18,8 +18,8 @@ html {
     font-family: "Raleway", sans-serif !important;
 }
 body{
-    margin: 15vh 14vw 0vh 14vw;
-    background-image: linear-gradient(to bottom, hsla(239,100%,98%,1), hsla(186, 70%, 25%, 1));
+    margin: 15vh 11vw 0vh 11vw;
+    background-image: linear-gradient(to bottom, hsla(239,100%,98%,1), hsla(70,60%,92%,1));
     /* valoefektit */
     box-shadow: 0vw 3vh 12vh 9vw hsla(28, 62%, 54%, 1),0vw 2vh 7vh 3vw hsla(44, 97%, 61%, 1),0vw 1vh 3vh 2vw hsla(51, 82%, 80%, 1);
     border-radius: 2vw 2vw 0vw 0vw;
@@ -37,32 +37,89 @@ body{
 .banner h2{
     font-size: 1.5em;
 }
+
+.subHeaders h2{
+    font-size: 1.5em;
+    text-align: center;
+}
+
+
 .container{
+
     display: block;
 
 }
+.content img {
+    width: 30vw;
+    height: auto;
+
+}
+.content video{
+    width: 30vw;
+    height: auto;
+}
+
+.imageGallery{
+    margin-left: 5vw;
+    column-count: 4;
+
+
+}
+
+.imageGalleryTimes{
+    display:flex;
+    font-size: 1.9em;
+    text-align: center;
+    margin: 1vw;
+
+}
+.imageGalleryTimes p{
+    margin: 0vw 6.5vw;
+
+}
+
+.imgInGallery img{
+    width: 13vw;
+    height: auto;
+    padding-left: 1vw;
+}
+
 
 .content{
     column-count: 2;
     padding:  10vh 0vw 10vh 0vw;
     font-size: 0.85em;
-    border-style: solid;
-    border-width: 0vw 0vw 0vw 2vw;
+
 
 }
+
+.content{
+    margin-left: 6vw;
+    border-style: solid;
+    border-width: 0vw 0vw 0vw 0.5vw;
+
+}
+
 .contentElement{
     padding-left: 3vw;
 }
 
-.content img {
-    width: 20vw;
-    height: auto;
 
-}
 
 .firstLayer {
+    padding: 1vw 2vh;
+    text-align: justify;
+    column-count: 1;
     background-color: hsla(28, 62%, 54%, 0.05);
 }
+
 .secondLayer{
+    padding: 0;
+    column-count: 1;
     background-color: hsla(28, 62%, 54%, 0.05);
 }
+.secondLayer h3{
+    margin-left: 5vw;
+}
+/*
+*/
