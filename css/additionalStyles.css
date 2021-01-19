@@ -76,7 +76,11 @@ body{
 }
 
 /*layer spesific*/
-
+.introduction{
+    column-count: 1;
+    padding: 2vw 2vh;
+    font-size: 1em;
+}
 .firstLayer {
     padding: 1vw 2vh;
     column-count: 1;
@@ -125,7 +129,9 @@ body{
 
 }
 .hoverImage:hover span img{
-    width: 60vw;
+    max-height: 80vh;
+    max-width: 60vw;
+    width: auto;
     box-shadow: 0vw 0vh 20vh 1vw hsl(0deg 43% 0%);
 }
 
