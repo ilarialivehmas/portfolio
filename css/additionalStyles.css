@@ -14,19 +14,31 @@ valkokulta: hsla(51, 82%, 80%, 1)
 
 
 html {
-    background-color: hsla(356, 65%, 23%, 1);
+    background-color: hsl(208deg 53% 35%);
     font-family: "Raleway", sans-serif !important;
 }
 body{
     margin: 15vh 11vw 0vh 11vw;
     background-image: linear-gradient(to bottom, hsla(239,100%,98%,1), hsla(70,60%,92%,1));
     /* valoefektit */
-    box-shadow: 0vw 3vh 12vh 9vw hsla(28, 62%, 54%, 1),0vw 2vh 7vh 3vw hsla(44, 97%, 61%, 1),0vw 1vh 3vh 2vw hsla(51, 82%, 80%, 1);
+    box-shadow: 0vw 3vh 12vh 9vw hsl(206deg 91% 75%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%);
     border-radius: 2vw 2vw 0vw 0vw;
 
 
 
 }
+
+.versionTag{
+    position: absolute;
+    top: 1vh;
+    left:1vw;
+    font-size: 0.75em;
+}
+.versionTag p{
+    margin: 0;
+    color: hsl(206deg 48% 57%);
+}
+
 .banner {
     padding: 6vh 3vw;
     text-align: center;
@@ -42,22 +54,82 @@ body{
     font-size: 1.5em;
     text-align: center;
 }
-
-
+/* container*/
 .container{
 
     display: block;
 
 }
-.content img {
+/*content*/
+
+.content{
+    margin-left: 6vw;
+    border-style: solid;
+    border-width: 0vw 0vw 0vw 0.5vw;
+    column-count: 2;
+    padding:  10vh 0vw 10vh 0vw;
+    font-size: 0.85rem;
+    text-align: justify;
+}
+.contentElement{
+    padding-left: 3vw;
+}
+
+/*layer spesific*/
+
+.firstLayer {
+    padding: 1vw 2vh;
+    column-count: 1;
+    /*background-color: hsla(28, 62%, 54%, 0.05);*/
+}
+
+.secondLayer{
+    padding: 0;
+    column-count: 1;
+    /*background-color: hsla(28, 62%, 54%, 0.05);*/
+}
+.secondLayer h3{
+    margin-left: 5vw;
+}
+
+/*contentElement*/
+
+.contentElement img {
     width: 30vw;
     height: auto;
 
+
+
 }
-.content video{
+.contentElement video{
     width: 30vw;
     height: auto;
 }
+
+/*hoverImage*/
+
+
+.hoverImage span{
+    position: fixed;
+    visibility: hidden;
+
+
+}
+
+.hoverImage:hover span{
+    visibility: visible;
+    bottom: 10vh;
+    left: 24vw;
+    background-color: transparent;
+    z-index: 50;
+
+}
+.hoverImage:hover span img{
+    width: 60vw;
+    box-shadow: 0vw 0vh 20vh 1vw hsl(0deg 43% 0%);
+}
+
+/*imageGallery*/
 
 .imageGallery{
     margin-left: 5vw;
@@ -65,7 +137,6 @@ body{
 
 
 }
-
 .imageGalleryTimes{
     display:flex;
     font-size: 1.9em;
@@ -81,45 +152,5 @@ body{
 .imgInGallery img{
     width: 13vw;
     height: auto;
-    padding-left: 1vw;
-}
-
-
-.content{
-    column-count: 2;
-    padding:  10vh 0vw 10vh 0vw;
-    font-size: 0.85em;
-
 
 }
-
-.content{
-    margin-left: 6vw;
-    border-style: solid;
-    border-width: 0vw 0vw 0vw 0.5vw;
-
-}
-
-.contentElement{
-    padding-left: 3vw;
-}
-
-
-
-.firstLayer {
-    padding: 1vw 2vh;
-    text-align: justify;
-    column-count: 1;
-    background-color: hsla(28, 62%, 54%, 0.05);
-}
-
-.secondLayer{
-    padding: 0;
-    column-count: 1;
-    background-color: hsla(28, 62%, 54%, 0.05);
-}
-.secondLayer h3{
-    margin-left: 5vw;
-}
-/*
-*/

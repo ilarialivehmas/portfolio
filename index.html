@@ -8,6 +8,7 @@
 
         <!-- Raleway Font family-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+        <script src="../portfolio/scripts/JsScripts.js"></script>
 
         <!-- W3 css reference -->
         <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
@@ -15,11 +16,17 @@
         <title>Portfolio </title>
     </head>
     <body>
+        <div class="versionTag">
+            <p>Work in progress</p>
+            <p>Last update: 19.1</p>
+            <p>Version: 0.10</p>
+
+        </div>
 
         <div class="banner">
             <h1>Welcome</h1>
             <h2>WORK IN PROGRESS. <br>
-            Last update on 18.1</h2>
+            Last update on 19.1</h2>
 
 
         </div>
@@ -56,17 +63,21 @@
                     <p>8:22</p>
                 </div>
                 <div class="imageGallery">
-                    <div class="imgInGallery">
+                    <div class="imgInGallery hoverImage">
                         <img src="../portfolio/images/hoplite.png" alt="hoplite_Illustration_0_01_43">
+                        <span><img src="../portfolio/images/hoplite.png" alt="hoplite_Illustration_0_01_43"></span>
                     </div>
-                    <div class="imgInGallery">
+                    <div class="imgInGallery hoverImage">
                         <img src="../portfolio/images/1_02_03_22.png" alt="hoplite_1_02_03">
+                        <span><img src="../portfolio/images/1_02_03_22.png" alt="hoplite_1_02_03"></span>
                     </div>
-                    <div class="imgInGallery">
+                    <div class="imgInGallery hoverImage">
                         <img src="../portfolio/images/2_04_29_23__vari.png" alt="hoplite_2_02_26">
+                        <span><img src="../portfolio/images/2_04_29_23__vari.png" alt="hoplite_2_02_26"></span>
                     </div>
-                    <div class="imgInGallery">
+                    <div class="imgInGallery hoverImage">
                         <img src="../portfolio/images/3_06_19_53__vari.png" alt="hoplite_3_02_10">
+                        <span><img src="../portfolio/images/3_06_19_53__vari.png" alt="hoplite_3_02_10"></span>
                     </div>
                 </div>
             </div>
@@ -78,7 +89,9 @@
                 </div>
                 <div class="contentElement">
                     <p>
-                        Maapallo
+                        Maapallo oli ripeä projekti, jossa halusin harjoittaa animointitaitojani sekä käyttää NASA:n tarjoamia planeettatekstuureja.
+                        Maapallo on luotu siten, että se reagoi täsmälliseti valonlähteisiin.
+                        Maapallon ympärille voi lisätä useita valonlähteitä ja ilmakehä sekä tekstuurit reagoivat dynaamisesti näihin.
                     </p>
                 </div>
                 <div class="contentElement">
@@ -96,11 +109,16 @@
                 </div>
                 <div class="contentElement">
                     <p>
-                      Profiilikuva
+                      Monesti mallintaessa tarvitsee luotettavan referenssin tai mallin ja mikä
+                      niin luotettava kuin peili. Tässä kuvassa mallin pohja on saatu fotoskannaamalla
+                      Meshroom-työkalulla. Fotoskannauksesta saatu malli vaatii kohtalaisesti putsausta,
+                      mutta pohja on silti hyvä.<br>
+
                     </p>
                 </div>
-                <div class="contentElement">
-                    <img src="../portfolio/images/12Comp.png" alt="Profiilikuva">
+                <div class="contentElement hoverImage">
+                    <img onmouseover="mOver(profiilikuva)" src="../portfolio/images/Anims/profiilikuva/12.png" alt="Profiilikuva">
+                    <span><img id="profiilikuva"  src="../portfolio/images/Anims/profiilikuva/12.png" alt="Profiilikuva"></span>
                 </div>
             </div>
             <div class="5thLayer content">
@@ -114,8 +132,9 @@
                         Puutyot
                     </p>
                 </div>
-                <div class="contentElement">
-                    <img src="../portfolio/images/penkki2.png" alt="Puutyot">
+                <div class="contentElement hoverImage">
+                    <img onmouseover="mOver(puutyot)" src="../portfolio/images/Anims/puutyot/2.png" alt="Puutyot">
+                    <span><img id="puutyot" src="../portfolio/images/Anims/puutyot/2.png" alt="Puutyot"></span>
                 </div>
             </div>
             <div class="6thLayer content">
@@ -129,8 +148,9 @@
                         Metsä
                     </p>
                 </div>
-                <div class="contentElement">
-                    <img src="../portfolio/images/8.png" alt="Metsa">
+                <div class="contentElement hoverImage">
+                    <img onmouseover="mOver(metsa)" src="../portfolio/images/Anims/metsa/8.png" alt="Metsa">
+                    <span><img id="metsa" src="../portfolio/images/Anims/metsa/8.png" alt="Metsa"></span>
                 </div>
             </div>
             <div class="7thLayer content">
@@ -144,8 +164,41 @@
                         Uimari
                     </p>
                 </div>
+                <div class="contentElement hoverImage">
+                    <img onmouseover="mOver(uimari)" src="../portfolio/images/Anims/uimari/10.png" alt="Uimari">
+                    <span><img id="uimari" src="../portfolio/images/Anims/uimari/10.png" alt="Uimari"></span>
+                </div>
+            </div>
+            <div class="8thLayer content">
+                <div class="contentElement timedate">
+                    <p>
+                        TODO
+                    </p>
+                </div>
                 <div class="contentElement">
-                    <img src="../portfolio/images/10.png" alt="Uimari">
+                    <p>
+                        Profiilipaa
+                    </p>
+                </div>
+                <div class="contentElement hoverImage">
+                    <img onmouseover="mOver(profiilipaa)" src="../portfolio/images/Anims/profiilipaa/11.png" alt="Profiilipaa">
+                    <span><img id="profiilipaa"src="../portfolio/images/Anims/profiilipaa/11.png" alt="Profiilipaa"></span>
+                </div>
+            </div>
+            <div class="9thLayer content">
+                <div class="contentElement timedate">
+                    <p>
+                        TODO
+                    </p>
+                </div>
+                <div class="contentElement">
+                    <p>
+                        Kasvot
+                    </p>
+                </div>
+                <div class="contentElement hoverImage">
+                    <img onmouseover="mOver(kasvot)" src="../portfolio/images/Anims/kasvot/16.png" alt="Kasvot">
+                    <span><img id="kasvot" src="../portfolio/images/Anims/kasvot/16.png"alt="Kasvot"></span>
                 </div>
             </div>
             <div class="subHeaders">
