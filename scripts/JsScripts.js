@@ -65,28 +65,114 @@ var paths = {
                     "../portfolio/images/Anims/uimari/0010.jpg"]
 
 }
-var interval;
+/*
+GLOBAL VARIABLES
+*/
 
+var intervalID;
+var progressIntervalID;
+var ww = 0;
+var wh = 0;
+var navScale;
+/*EVENT LISTENERS
+
+*/
+window.addEventListener("orientationchange", function(event) {
+    setTimeout(function() {
+        createNavigator();
+    }, 500)
+
+});
+
+
+/*
+FUNCTIONS
+
+*/
 function mOver(elementId){
     var pathlenght = 0;
-    var interval = setInterval(frame, 2000);
+    intervalID = setInterval(frame, 2000);
     var imgCount = paths[elementId.id].length;
-    console.log(imgCount);
     var animFrame = 0;
+    var step = (2000*imgCount/500);
+    var width = 0;
+    var prog = document.getElementsByClassName('progression');
+    progressIntervalID = setInterval(progressfunction, step);
     function frame(){
         if (animFrame < imgCount){
             console.log(paths[elementId.id][animFrame]);
             elementId.src= paths[elementId.id][animFrame];
             animFrame++;
-        }else {
-            clearInterval(interval);
         }
 
     }
+    function progressfunction(){
+        if (width >= 100) {
+            clearInterval(progressIntervalID);
+
+        } else {
+            width = width + 0.2;
+            var k;
+            for (k = 0; k < prog.length; k++) {
+              prog[k].style.width = width + "%";
+            }
+        }
+
+
+
+
+
+    }
+
 
 }
+
+
+
+
+
 function mOut(elementId){
-    clearInterval(interval);
-    id.src="../portfolio/images/12Comp.jpg";
+    clearInterval(intervalID);
+    clearInterval(progressIntervalID);
+    elementId.src= paths[elementId.id][paths[elementId.id].length-1];
+
+}
+
+function createNavigator(){
+    navScale = 18;
+    var pw  = (document.documentElement.scrollWidth/navScale).toString();
+    var ph = (document.documentElement.scrollHeight/navScale).toString();
+    ww = (window.innerWidth/navScale).toString();
+    wh = (window.innerHeight/navScale).toString();
+    var c = document.getElementById("nCanvas");
+    var ctx = c.getContext("2d");
+    ctx.canvas.width  = pw;
+    ctx.canvas.height = ph;
+    ctx.fillStyle = "hsl(206deg 48% 57%)";
+    /*ctx.globalAlpha = 0.5;*/
+    ctx.fillRect(0,0,ww,wh);
+
+
+
+}
+
+function mouseWheel(event){
+    /*
+    var dY = event.deltaY;
+    wposY = wposY +dY;
+    */
+    var wposY = window.scrollY;
+    if (wposY < 0) {
+        wposY = 0;
+    }
+    if (wposY > document.documentElement.scrollHeight - wh*navScale) {
+        wposY = document.documentElement.scrollHeight - wh*navScale;
+    }
+
+    var c = document.getElementById("nCanvas");
+    var ctx = c.getContext("2d");
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    ctx.fillRect(0, wposY/navScale, ww, wh);
 
 }

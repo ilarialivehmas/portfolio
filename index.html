@@ -15,17 +15,21 @@
 
         <title>Portfolio </title>
     </head>
-    <body>
+    <body onscroll="mouseWheel(event)" onload="createNavigator()">
         <div class="versionTag">
             <p>Work in progress</p>
-            <p>Last update: 19.1</p>
-            <p>Version: 0.10</p>
+            <p>Last update: 20.1</p>
+            <p>Version: 0.11</p>
 
         </div>
 
         <div class="banner">
             <h1>Welcome</h1>
         </div>
+
+        <canvas class="navCanvas" id="nCanvas">
+        Your browser does not support the HTML canvas tag.
+        </canvas>
 
         <div class="container">
             <div class="subHeaders">
@@ -124,8 +128,12 @@
                     </p>
                 </div>
                 <div class="contentElement hoverImage">
-                    <img onmouseover="mOver(profiilikuva)" src="../portfolio/images/Anims/profiilikuva/0012.jpg" alt="Profiilikuva">
-                    <span><img id="profiilikuva"  src="../portfolio/images/Anims/profiilikuva/0012.jpg" alt="Profiilikuva"></span>
+                    <img  src="../portfolio/images/Anims/profiilikuva/0012.jpg" alt="Profiilikuva">
+                    <span><img id="profiilikuva"  onmouseover="mOver(profiilikuva)" onmouseout="mOut(profiilikuva)" src="../portfolio/images/Anims/profiilikuva/0012.jpg" alt="Profiilikuva">
+                        <div class="videoProgress">
+                            <div class="progression"></div>
+                        </div>
+                    </span>
                 </div>
             </div>
             <div class="5thLayer content">
@@ -140,8 +148,12 @@
                     </p>
                 </div>
                 <div class="contentElement hoverImage">
-                    <img onmouseover="mOver(puutyot)" src="../portfolio/images/Anims/puutyot/0002.jpg" alt="Puutyot">
-                    <span><img id="puutyot" src="../portfolio/images/Anims/puutyot/0002.jpg" alt="Puutyot"></span>
+                    <img src="../portfolio/images/Anims/puutyot/0002.jpg" alt="Puutyot">
+                    <span><img id="puutyot" onmouseover="mOver(puutyot)" onmouseout="mOut(puutyot)" src="../portfolio/images/Anims/puutyot/0002.jpg" alt="Puutyot">
+                        <div class="videoProgress">
+                            <div class="progression"></div>
+                        </div>
+                    </span>
                 </div>
             </div>
             <div class="6thLayer content">
@@ -156,8 +168,13 @@
                     </p>
                 </div>
                 <div class="contentElement hoverImage">
-                    <img onmouseover="mOver(metsa)" src="../portfolio/images/Anims/metsa/0008.jpg" alt="Metsa">
-                    <span><img id="metsa" src="../portfolio/images/Anims/metsa/0008.jpg" alt="Metsa"></span>
+                    <img  src="../portfolio/images/Anims/metsa/0008.jpg" alt="Metsa">
+                    <span>
+                        <img id="metsa" onmouseover="mOver(metsa)" onmouseout="mOut(metsa)" src="../portfolio/images/Anims/metsa/0008.jpg" alt="Metsa">
+                        <div class="videoProgress">
+                            <div class="progression"></div>
+                        </div>
+                    </span>
                 </div>
             </div>
             <div class="7thLayer content">
@@ -172,8 +189,12 @@
                     </p>
                 </div>
                 <div class="contentElement hoverImage">
-                    <img onmouseover="mOver(uimari)" src="../portfolio/images/Anims/uimari/0010.jpg" alt="Uimari">
-                    <span><img id="uimari" src="../portfolio/images/Anims/uimari/0010.jpg" alt="Uimari"></span>
+                    <img src="../portfolio/images/Anims/uimari/0010.jpg" alt="Uimari">
+                    <span><img id="uimari" onmouseover="mOver(uimari)" onmouseout="mOut(uimari)" src="../portfolio/images/Anims/uimari/0010.jpg" alt="Uimari">
+                        <div class="videoProgress">
+                            <div class="progression"></div>
+                        </div>
+                    </span>
                 </div>
             </div>
             <div class="8thLayer content">
@@ -188,8 +209,12 @@
                     </p>
                 </div>
                 <div class="contentElement hoverImage">
-                    <img onmouseover="mOver(profiilipaa)" src="../portfolio/images/Anims/profiilipaa/0011.jpg" alt="Profiilipaa">
-                    <span><img id="profiilipaa"src="../portfolio/images/Anims/profiilipaa/0011.jpg" alt="Profiilipaa"></span>
+                    <img  src="../portfolio/images/Anims/profiilipaa/0011.jpg" alt="Profiilipaa">
+                    <span><img id="profiilipaa" onmouseover="mOver(profiilipaa)" onmouseout="mOut(profiilipaa)" src="../portfolio/images/Anims/profiilipaa/0011.jpg" alt="Profiilipaa">
+                        <div class="videoProgress">
+                            <div class="progression"></div>
+                        </div>
+                    </span>
                 </div>
             </div>
             <div class="9thLayer content">
@@ -204,8 +229,12 @@
                     </p>
                 </div>
                 <div class="contentElement hoverImage">
-                    <img onmouseover="mOver(kasvot)" src="../portfolio/images/Anims/kasvot/0016.jpg" alt="Kasvot">
-                    <span><img id="kasvot" src="../portfolio/images/Anims/kasvot/0016.jpg"alt="Kasvot"></span>
+                    <img  src="../portfolio/images/Anims/kasvot/0016.jpg" alt="Kasvot">
+                    <span><img id="kasvot" onmouseover="mOver(kasvot)" onmouseout="mOut(kasvot)" src="../portfolio/images/Anims/kasvot/0016.jpg"alt="Kasvot">
+                        <div class="videoProgress">
+                            <div class="progression"></div>
+                        </div>
+                    </span>
                 </div>
             </div>
             <div class="subHeaders">
