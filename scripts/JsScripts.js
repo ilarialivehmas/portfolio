@@ -62,7 +62,32 @@ var paths = {
                     "../portfolio/images/Anims/uimari/0007.jpg",
                     "../portfolio/images/Anims/uimari/0008.jpg",
                     "../portfolio/images/Anims/uimari/0009.jpg",
-                    "../portfolio/images/Anims/uimari/0010.jpg"]
+                    "../portfolio/images/Anims/uimari/0010.jpg"],
+    hoplite:["../portfolio/images/JPGs/Hoplite_Illustration.jpg",
+                    "../portfolio/images/JPGs/Hoplite_1_02_03.jpg",
+                    "../portfolio/images/JPGs/Hoplite_2_04_30.jpg",
+                    "../portfolio/images/JPGs/Hoplite_3_06_20.jpg"],
+    kettu:["../portfolio/images/JPGs/Kettu.jpg"],
+
+    kypara:["../portfolio/images/JPGs/kypara.jpg"],
+
+    sienilamppu:["../portfolio/images/JPGs/Lamppu_paiva_yo.jpg",
+                    "../portfolio/images/JPGs/sienilamppu"],
+
+    mokki:["../portfolio/images/JPGs/Mokkiskene.jpg"],
+
+    lukutoukka:["../portfolio/images/JPGs/Lukutoukka.jpg"],
+
+    zero:["../portfolio/images/JPGs/Zero.jpg"],
+
+    atk:["../portfolio/images/JPGs/ATK.jpg"],
+
+    budha:["../portfolio/images/JPGs/Budha.jpg"],
+
+    lamppu7:["../portfolio/images/JPGs/Lamppu7"],
+
+    patsaspaa:["../portfolio/images/JPGs/Patsaspaa.jpg"]
+
 
 }
 /*
