@@ -96,9 +96,12 @@ GLOBAL VARIABLES
 
 var intervalID;
 var progressIntervalID;
-var ww = 0;
-var wh = 0;
-var navScale;
+var navWW = undefined;
+var navWH = undefined;
+var navH = undefined;
+var c = undefined;
+var ctx =undefined;
+
 /*EVENT LISTENERS
 
 */
@@ -129,7 +132,6 @@ function mOver(elementId){
             elementId.src= paths[elementId.id][animFrame];
             animFrame++;
         }
-
     }
     function progressfunction(){
         if (width >= 100) {
@@ -142,43 +144,25 @@ function mOver(elementId){
               prog[k].style.width = width + "%";
             }
         }
-
-
-
-
-
     }
-
-
 }
-
-
-
-
 
 function mOut(elementId){
     clearInterval(intervalID);
     clearInterval(progressIntervalID);
     elementId.src= paths[elementId.id][paths[elementId.id].length-1];
-
 }
 
 function createNavigator(){
-    navScale = 18;
-    var pw  = (document.documentElement.scrollWidth/navScale).toString();
-    var ph = (document.documentElement.scrollHeight/navScale).toString();
-    ww = (window.innerWidth/navScale).toString();
-    wh = (window.innerHeight/navScale).toString();
-    var c = document.getElementById("nCanvas");
-    var ctx = c.getContext("2d");
-    ctx.canvas.width  = pw;
-    ctx.canvas.height = ph;
-    ctx.fillStyle = "hsl(206deg 48% 57%)";
-    /*ctx.globalAlpha = 0.5;*/
-    ctx.fillRect(0,0,ww,wh);
 
 
-
+    navH = window.innerHeight/2;
+    navWH = navH*window.innerHeight/document.documentElement.scrollHeight;
+    navWW = navWH*window.innerWidth/window.innerHeight;
+    let box = document.getElementById('banner').getBoundingClientRect();
+    initCanvas();
+    drawStaticCanvas();
+    drawNavWindow(0);
 }
 
 function mouseWheel(event){
@@ -190,14 +174,35 @@ function mouseWheel(event){
     if (wposY < 0) {
         wposY = 0;
     }
-    if (wposY > document.documentElement.scrollHeight - wh*navScale) {
-        wposY = document.documentElement.scrollHeight - wh*navScale;
+    if (wposY > document.documentElement.scrollHeight - navWH*window.innerHeight/document.documentElement.scrollHeight) {
+        wposY = document.documentElement.scrollHeight - navWH*window.innerHeight/document.documentElement.scrollHeight;
     }
+    drawNavWindow(wposY);
+}
 
-    var c = document.getElementById("nCanvas");
-    var ctx = c.getContext("2d");
+function drawStaticCanvas(){
+    var navCanvScale = navH/document.documentElement.scrollHeight;
+    var digitalArtS = document.getElementById("digitalArt").getBoundingClientRect();
+    ctx.fillStyle = "hsla(359, 35%, 49%, 0.7)";
+    ctx.fillRect(0, (digitalArtS.y+window.pageYOffset)*navCanvScale, navWW, digitalArtS.height*navCanvScale);
+    var programmingS = document.getElementById("programming").getBoundingClientRect();
+    ctx.fillStyle = "hsla(19, 40%, 50%, 0.7)";
+    ctx.fillRect(0, (programmingS.y+window.pageYOffset)*navCanvScale, navWW, programmingS.height*navCanvScale);
+
+}
+
+function drawNavWindow(wPosY){
+    initCanvas();
+    drawStaticCanvas();
+    ctx.fillStyle = "hsla(206, 48%, 57%, 0.7)";
+    ctx.fillRect(0, (wPosY*navH/document.documentElement.scrollHeight), navWW, navWH);
+}
+
+function initCanvas(){
+    c = document.getElementById("nCanvas");
+    c.style.top = (navH-(1/2*navH)).toString()+"px";
+    ctx = c.getContext("2d");
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-
-    ctx.fillRect(0, wposY/navScale, ww, wh);
-
+    ctx.canvas.width  = navWW;
+    ctx.canvas.height = navH;
 }

@@ -64,8 +64,9 @@ body{
 /*navigator*/
 .navCanvas{
     position: fixed;
+    top :120px;
     margin-left: -9vw;
-    border-radius: 2 vw;
+    border-radius: 2vw;
     background-color: hsla(360, 0%, 100%, 0.1);
     border:1px solid #d3d3d3;
 }
@@ -139,9 +140,11 @@ body{
 }
 
 .hoverImage:hover span{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     visibility: visible;
-    bottom: 10vh;
-    left: 24vw;
     background-color: transparent;
     z-index: 50;
 
