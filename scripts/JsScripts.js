@@ -69,7 +69,8 @@ var paths = {
                     "../portfolio/images/JPGs/Hoplite_3_06_20.jpg"],
     kettu:["../portfolio/images/JPGs/Kettu.jpg"],
 
-    kypara:["../portfolio/images/JPGs/kypara.jpg"],
+    kypara:["../portfolio/images/JPGs/kypara2.jpg",
+                    "../portfolio/images/JPGs/kypara.jpg"],
 
     sienilamppu:["../portfolio/images/JPGs/Lamppu_paiva_yo.jpg",
                     "../portfolio/images/JPGs/sienilamppu"],
@@ -150,7 +151,7 @@ function mOver(elementId){
 function mOut(elementId){
     clearInterval(intervalID);
     clearInterval(progressIntervalID);
-    elementId.src= paths[elementId.id][paths[elementId.id].length-1];
+    elementId.src= paths[elementId.id][(paths[elementId.id].length-1)];
 }
 
 function createNavigator(){
@@ -183,19 +184,29 @@ function mouseWheel(event){
 function drawStaticCanvas(){
     var navCanvScale = navH/document.documentElement.scrollHeight;
     var digitalArtS = document.getElementById("digitalArt").getBoundingClientRect();
+    /*Digital art Color*/
     ctx.fillStyle = "hsla(359, 35%, 49%, 0.7)";
     ctx.fillRect(0, (digitalArtS.y+window.pageYOffset)*navCanvScale, navWW, digitalArtS.height*navCanvScale);
     var programmingS = document.getElementById("programming").getBoundingClientRect();
+    /*programming Color art Color*/
     ctx.fillStyle = "hsla(19, 40%, 50%, 0.7)";
     ctx.fillRect(0, (programmingS.y+window.pageYOffset)*navCanvScale, navWW, programmingS.height*navCanvScale);
+
+    /*design Color*/
+    var designS = document.getElementById("design").getBoundingClientRect();
+    ctx.fillStyle = "hsla(122, 89%, 10%, 0.7)";
+    ctx.fillRect(0, (designS.y+window.pageYOffset)*navCanvScale, navWW, designS.height*navCanvScale);
 
 }
 
 function drawNavWindow(wPosY){
     initCanvas();
     drawStaticCanvas();
-    ctx.fillStyle = "hsla(206, 48%, 57%, 0.7)";
+    ctx.fillStyle = "hsla(206, 48%, 40%, 0.3)";
     ctx.fillRect(0, (wPosY*navH/document.documentElement.scrollHeight), navWW, navWH);
+    /*deco color*/
+    ctx.fillStyle = "hsla(206, 48%, 57%, 0.6)";
+    ctx.fillRect(0, ((wPosY*navH/document.documentElement.scrollHeight))+2, navWW, navWH-2);
 }
 
 function initCanvas(){

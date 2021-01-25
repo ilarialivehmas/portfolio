@@ -14,12 +14,16 @@ valkokulta: hsla(51, 82%, 80%, 1)
 
 
 html {
-    background-color: hsl(208deg 53% 35%);
+
+    background-color: hsla(208deg, 53%, 35%, 1);
     font-family: "Raleway", sans-serif !important;
 }
+
+
 body{
     margin: 15vh 11vw 0vh 11vw;
-    background-color:  hsla(239,100%,98%,1);
+
+    background-color:  hsl(206deg 100% 98%);
     /* valoefektit */
     box-shadow: 0vw 3vh 12vh 9vw hsl(206deg 91% 75%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%);
     border-radius: 2vw 2vw 0vw 0vw;
@@ -50,6 +54,7 @@ body{
     font-size: 1.5em;
 }
 
+
 .subHeaders h2{
     font-size: 1.5em;
     text-align: center;
@@ -65,7 +70,8 @@ body{
 .navCanvas{
     position: fixed;
     top :120px;
-    margin-left: -9vw;
+    margin-left: -7.5vw;
+    box-shadow: 0 0 3vh 0vw hsl(194deg 100% 96%);
     border-radius: 2vw;
     background-color: hsla(360, 0%, 100%, 0.1);
     border:1px solid #d3d3d3;
@@ -74,11 +80,16 @@ body{
 /*content*/
 
 .content{
-    margin-left: 6vw;
-    border-style: solid;
-    border-width: 0vw 0vw 0vw 0.5vw;
+    margin-top: 2vh;
+    background-color: hsl(0deg 0% 100% / 42%);
+    border-radius: 4vw;
+    box-shadow: 3px 3px 0vh 0vw hsl(0deg 0% 0%), 1px 5px 4vh 0vw hsl(237deg 100% 85% / 32%);
+    margin-left: 7vw;
+    margin-right: 3vw;
+    /*border-style: solid;
+    border-width: 0vw 0vw 0vw 0.5vw;*/
     column-count: 2;
-    padding:  10vh 0vw 10vh 0vw;
+    padding:  10vh 4vw 10vh 2vw;
     font-size: 0.85rem;
     text-align: justify;
 }
@@ -87,7 +98,7 @@ body{
 /*layer spesific*/
 .introduction{
     column-count: 1;
-    padding: 2vw 2vh;
+    padding: 2vw 8vh;
     font-size: 0.85rem;
 }
 .firstLayer {
@@ -96,19 +107,15 @@ body{
     /*background-color: hsla(28, 62%, 54%, 0.05);*/
 }
 
-.secondLayer{
-    padding: 0;
-    column-count: 1;
-    /*background-color: hsla(28, 62%, 54%, 0.05);*/
-}
-.secondLayer h3{
-    margin-left: 5vw;
+.firstLayer h3{
+    margin-left: 3vw;
 }
 
 
 /*contentElement*/
 .contentElement{
-    padding-left: 3vw;
+    padding-top: 1vh;
+    padding-left: 1.5vw;
 
 }
 .contentElement p{
