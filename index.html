@@ -18,8 +18,8 @@
     <body onscroll="mouseWheel(event)" onload="createNavigator()">
         <div class="versionTag">
             <p>Work in progress</p>
-            <p>Last update: 25.1</p>
-            <p>Version: 0.20</p>
+            <p>Last update: 29.1</p>
+            <p>Version: 0.21</p>
 
         </div>
 
@@ -27,9 +27,18 @@
             <h1>Tervetuloa</h1>
         </div>
 
-        <canvas class="navCanvas" id="nCanvas">
-        Your browser does not support the HTML canvas tag.
-        </canvas>
+
+        <div class="navigator" id="navDiv">
+            <canvas class="navCanvas" id="nCanvas">
+            Your browser does not support the HTML canvas tag.
+            </canvas>
+            <div class="navButtons">
+                <button type="button" id="toDigitalArtID" onclick="skipTo('digitalArt')">Digitaalitaiteeseen</button>
+                <button type="button" id="toProgrammingID" onclick="skipTo('programming')">Ohjelmointiin</button>
+                <button type="button" id="toDesignID" onclick="skipTo('design')">Designiin</button>
+            </div>
+        </div>
+
         <div class="introduction">
 
             <div class="contentElement">
@@ -175,7 +184,12 @@
                         </p>
                     </div>
                     <div class="contentElement">
-                        <p>Grex Logo</p>
+                        <p> Grex Musicus on kuoro, jossa vaikutan aktiivisesti.
+                            Tämä video oli tarkoitus julkaista osana kuoron esittämää Elokuvakonserttia.
+                            Konsertti valitettavasti on lykätty toistaiseksi koronan takia. </p>
+                            <br>
+                        <p>Animaation oli tarkoitus imitoida 20th Century Foxin teemaa ja
+                            mielestäni tunnelma siirtyi hyvin lopulliseen videoon. </p>
 
                     </div>
                     <div class="contentElement">
@@ -285,6 +299,14 @@
                         <p>
                             Olin tässä vaiheessa harjoitellut kasvoja erilaisin
                             metodein ja tavoitteeni oli luoda mahdollisimman todenmukainen omakuva.
+                            Aloitin prosessin ottamalla referenssikuvia muutamasta eri suunnasta ja
+                            etsimällä keskeisimmät kasvojen piirteet.
+                            <br>
+                            <br>
+                            Näin jälkikäteen reflektoiden silloisessa
+                            prosessissa oli monia epäkohtia, kuten että mallinnuksessa käytetty digitaalisen
+                            linssin koko oli eri kuin kameralla otettujen referenssikuvien linssin koko.
+                            Tämä aiheutti virhettä malliin.
 
                         </p>
                     </div>
@@ -305,7 +327,13 @@
                     </div>
                     <div class="contentElement">
                         <p>
-                            Patsaspää
+                            Olin juuri pohtinut, kuina lunta voisi luoda realistisesti kuvaan.
+                            Tässä prosessissa partikkeleita tiputettiin ympäristöön, jonka jälkeen
+                            partikkelit muutettiin kerrokseksi lunta. Tuloksena oli realistisempi
+                            lopputulos lumipeitteestä. Sain idean soveltaa kyseistä metodia vesisateeseen
+                            ja tämä kuva syntyi tuloksena.
+
+
                         </p>
                     </div>
                     <div class="contentElement hoverImage">

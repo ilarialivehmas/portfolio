@@ -67,14 +67,34 @@ body{
 }
 
 /*navigator*/
-.navCanvas{
+
+.navigator{
     position: fixed;
     top :120px;
+}
+
+.navCanvas{
     margin-left: -7.5vw;
     box-shadow: 0 0 3vh 0vw hsl(194deg 100% 96%);
     border-radius: 2vw;
     background-color: hsla(360, 0%, 100%, 0.1);
     border:1px solid #d3d3d3;
+}
+
+.navButtons button{
+    background-color: hsl(237deg 100% 85% / 100%);
+    border: none;
+    padding: 2vw 4vh;
+    opacity: 0.4;
+    position: absolute;
+    top: 10vh;
+    margin-left: -3vw;
+    transition: 0.3s;
+    box-shadow: 1px 7px 1vh 0vw hsl(237deg 100% 85% / 32%);
+}
+.navButtons button:hover{
+    opacity: 1;
+
 }
 
 /*content*/
@@ -165,6 +185,7 @@ body{
     border-width: 0.3vw;
     border-color: #faf6e3;
     box-shadow: 0vw 0vh 20vh 1vw hsl(0deg 43% 0%);
+    transition: 0.4s;
 }
 .videoProgress {
     z-index: 100;

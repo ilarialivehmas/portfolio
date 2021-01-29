@@ -73,7 +73,7 @@ var paths = {
                     "../portfolio/images/JPGs/kypara.jpg"],
 
     sienilamppu:["../portfolio/images/JPGs/Lamppu_paiva_yo.jpg",
-                    "../portfolio/images/JPGs/sienilamppu"],
+                    "../portfolio/images/JPGs/sieniLamppu"],
 
     mokki:["../portfolio/images/JPGs/Mokkiskene.jpg"],
 
@@ -184,20 +184,40 @@ function mouseWheel(event){
 function drawStaticCanvas(){
     var navCanvScale = navH/document.documentElement.scrollHeight;
     var digitalArtS = document.getElementById("digitalArt").getBoundingClientRect();
+
     /*Digital art Color*/
     ctx.fillStyle = "hsla(359, 35%, 49%, 0.7)";
     ctx.fillRect(0, (digitalArtS.y+window.pageYOffset)*navCanvScale, navWW, digitalArtS.height*navCanvScale);
+    document.getElementById("toDigitalArtID").style.top = ((digitalArtS.y+window.pageYOffset)*navCanvScale+(digitalArtS.height*navCanvScale/2)-15).toString()+"px";
+
     var programmingS = document.getElementById("programming").getBoundingClientRect();
     /*programming Color art Color*/
     ctx.fillStyle = "hsla(19, 40%, 50%, 0.7)";
     ctx.fillRect(0, (programmingS.y+window.pageYOffset)*navCanvScale, navWW, programmingS.height*navCanvScale);
+    document.getElementById("toProgrammingID").style.top = ((programmingS.y+window.pageYOffset)*navCanvScale+(programmingS.height*navCanvScale/2)-15).toString()+"px";
 
     /*design Color*/
     var designS = document.getElementById("design").getBoundingClientRect();
     ctx.fillStyle = "hsla(122, 89%, 10%, 0.7)";
     ctx.fillRect(0, (designS.y+window.pageYOffset)*navCanvScale, navWW, designS.height*navCanvScale);
+    document.getElementById("toDesignID").style.top = ((designS.y+window.pageYOffset)*navCanvScale+(designS.height*navCanvScale/2)-15).toString()+"px";
 
 }
+
+function skipTo(section){
+    if (section == "digitalArt"){
+        console.log("to digitalArt");
+    }else if (section == "programming"){
+        console.log("to programming");
+    }else if (section == "design"){
+        console.log("to design");
+    }else {
+        console.log("wrong parameter at skip to");
+    }
+
+}
+
+
 
 function drawNavWindow(wPosY){
     initCanvas();
@@ -210,8 +230,9 @@ function drawNavWindow(wPosY){
 }
 
 function initCanvas(){
+    navDiv = document.getElementById("navDiv");
+    navDiv.style.top = (navH-(1/2*navH)).toString()+"px";
     c = document.getElementById("nCanvas");
-    c.style.top = (navH-(1/2*navH)).toString()+"px";
     ctx = c.getContext("2d");
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.canvas.width  = navWW;
