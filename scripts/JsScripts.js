@@ -63,6 +63,32 @@ var paths = {
                     "../portfolio/images/Anims/uimari/0008.jpg",
                     "../portfolio/images/Anims/uimari/0009.jpg",
                     "../portfolio/images/Anims/uimari/0010.jpg"],
+
+    rome1:["../portfolio/images/Anims/rome1/0001.jpg",
+        "../portfolio/images/Anims/rome1/0002.jpg",
+        "../portfolio/images/Anims/rome1/0003.jpg",
+        "../portfolio/images/Anims/rome1/0004.jpg",],
+    rome2:["../portfolio/images/Anims/rome2/0001.jpg",
+        "../portfolio/images/Anims/rome2/0002.jpg",
+        "../portfolio/images/Anims/rome2/0003.jpg",
+        "../portfolio/images/Anims/rome2/0004.jpg",
+        "../portfolio/images/Anims/rome2/0005.jpg",
+        "../portfolio/images/Anims/rome2/0006.jpg",],
+    rome3:["../portfolio/images/Anims/rome3/0003.jpg",
+        "../portfolio/images/Anims/rome3/0002.jpg",
+        "../portfolio/images/Anims/rome3/0003.jpg",
+        "../portfolio/images/Anims/rome3/0004.jpg",
+        "../portfolio/images/Anims/rome3/0005.jpg",
+        "../portfolio/images/Anims/rome3/0006.jpg",],
+    rome4:["../portfolio/images/Anims/rome4/0001.jpg",
+        "../portfolio/images/Anims/rome4/0002.jpg",
+        "../portfolio/images/Anims/rome4/0003.jpg",
+        "../portfolio/images/Anims/rome4/0004.jpg",
+        "../portfolio/images/Anims/rome4/0005.jpg",
+        "../portfolio/images/Anims/rome4/0006.jpg",],
+
+
+
     hoplite:["../portfolio/images/JPGs/Hoplite_Illustration.jpg",
                     "../portfolio/images/JPGs/Hoplite_1_02_03.jpg",
                     "../portfolio/images/JPGs/Hoplite_2_04_30.jpg",
@@ -88,6 +114,8 @@ var paths = {
     lamppu7:["../portfolio/images/JPGs/Lamppu7"],
 
     patsaspaa:["../portfolio/images/JPGs/Patsaspaa.jpg"]
+
+
 
 
 }
@@ -204,13 +232,21 @@ function drawStaticCanvas(){
 
 }
 
+
 function skipTo(section){
+    var element = undefined;
     if (section == "digitalArt"){
-        console.log("to digitalArt");
+        element = document.getElementById("digitalArt");
+        element.scrollIntoView();
+
     }else if (section == "programming"){
-        console.log("to programming");
+        element = document.getElementById("programming");
+        element.scrollIntoView();
+
     }else if (section == "design"){
-        console.log("to design");
+        element = document.getElementById("design");
+        element.scrollIntoView();
+
     }else {
         console.log("wrong parameter at skip to");
     }

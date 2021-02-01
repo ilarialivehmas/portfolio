@@ -84,7 +84,7 @@ body{
 .navButtons button{
     background-color: hsl(237deg 100% 85% / 100%);
     border: none;
-    padding: 2vw 4vh;
+    padding: 0.5vw 1vh;
     opacity: 0.4;
     position: absolute;
     top: 10vh;
