@@ -207,6 +207,7 @@ function mouseWheel(event){
         wposY = document.documentElement.scrollHeight - navWH*window.innerHeight/document.documentElement.scrollHeight;
     }
     drawNavWindow(wposY);
+    /*changeColour();*/
 }
 
 function drawStaticCanvas(){
@@ -233,26 +234,6 @@ function drawStaticCanvas(){
 }
 
 
-function skipTo(section){
-    var element = undefined;
-    if (section == "digitalArt"){
-        element = document.getElementById("digitalArt");
-        element.scrollIntoView();
-
-    }else if (section == "programming"){
-        element = document.getElementById("programming");
-        element.scrollIntoView();
-
-    }else if (section == "design"){
-        element = document.getElementById("design");
-        element.scrollIntoView();
-
-    }else {
-        console.log("wrong parameter at skip to");
-    }
-
-}
-
 
 
 function drawNavWindow(wPosY){
@@ -273,4 +254,40 @@ function initCanvas(){
     ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
     ctx.canvas.width  = navWW;
     ctx.canvas.height = navH;
+}
+/*
+function changeColour(){
+    var body = document.getElementById("bodyID");
+    var digitalArtS = document.getElementById("digitalArt").getBoundingClientRect();
+    var programmingS = document.getElementById("programming").getBoundingClientRect();
+    var designS = document.getElementById("design").getBoundingClientRect();
+    if (digitalArtS.top < window.pageYOffset+window.innerHeight/2 < digitalArtS.bottom){
+        body.style.boxShadow = "0vw 3vh 12vh 9vw hsl(123deg 91% 25%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%)";
+    }else if(programmingS.top < window.pageYOffset+window.innerHeight/2 < programmingS.bottom){
+        body.style.boxShadow = "0vw 3vh 12vh 9vw hsl(44deg 91% 75%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%)";
+    }else if (designS.top < window.pageYOffset+window.innerHeight/2 < designS.bottom) {
+        body.style.boxShadow = "0vw 3vh 12vh 9vw hsl(3deg 91% 75%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%)";
+    }else {
+        body.style.boxShadow = "0vw 3vh 12vh 9vw hsl(206deg 91% 75%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%)";
+    }
+}
+*/
+function skipTo(section){
+    var element = undefined;
+    if (section == "digitalArt"){
+        element = document.getElementById("digitalArt");
+        element.scrollIntoView();
+
+    }else if (section == "programming"){
+        element = document.getElementById("programming");
+        element.scrollIntoView();
+
+    }else if (section == "design"){
+        element = document.getElementById("design");
+        element.scrollIntoView();
+
+    }else {
+        console.log("wrong parameter at skip to");
+    }
+
 }

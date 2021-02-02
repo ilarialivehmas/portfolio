@@ -22,7 +22,7 @@ html {
 
 body{
     margin: 15vh 11vw 0vh 11vw;
-
+    /*transition: 0.4;*/
     background-color:  hsl(206deg 100% 98%);
     /* valoefektit */
     box-shadow: 0vw 3vh 12vh 9vw hsl(206deg 91% 75%),0vw 2vh 7vh 3vw hsl(194deg 90% 83%),0vw 1vh 2vh 2vw hsl(188deg 100% 95%);
