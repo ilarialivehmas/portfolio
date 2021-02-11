@@ -99,6 +99,7 @@ var paths = {
                     "../portfolio/images/JPGs/kypara.jpg"],
 
     sienilamppu:["../portfolio/images/JPGs/Lamppu_paiva_yo.jpg",
+                    "../portfolio/images/JPGs/sieni5",
                     "../portfolio/images/JPGs/sieniLamppu"],
 
     mokki:["../portfolio/images/JPGs/Mokkiskene.jpg"],
@@ -109,9 +110,11 @@ var paths = {
 
     atk:["../portfolio/images/JPGs/ATK.jpg"],
 
-    budha:["../portfolio/images/JPGs/Budha.jpg"],
+    budha:["../portfolio/images/JPGs/budhapiirros.jpg",
+            "../portfolio/images/JPGs/Budha.jpg"],
 
-    lamppu7:["../portfolio/images/JPGs/Lamppu7"],
+    lamppu7:["../portfolio/images/JPGs/Lamppu7",
+            "../portfolio/images/JPGs/mehilainen1"],
 
     patsaspaa:["../portfolio/images/JPGs/Patsaspaa.jpg"]
 

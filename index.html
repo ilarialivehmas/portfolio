@@ -18,8 +18,8 @@
     <body onscroll="mouseWheel(event)" onload="createNavigator()">
         <div class="versionTag">
             <p>Work in progress</p>
-            <p>Last update: 2.2</p>
-            <p>Version: 0.24</p>
+            <p>Last update: 11.2</p>
+            <p>Version: 0.25</p>
 
         </div>
 
@@ -368,12 +368,20 @@
                     </div>
                     <div class="contentElement">
                         <p>
-                            Budha
+                            Budha on jälleen yksi parityö Oskari Frimanin kanssa. Jälleen koko skene on luotu yhden viikonlopun aikana.
+                            Pohdimme jälleen toteutettavaa kuvaa hyvän tunnelman kautta ja päädyimme ottamaan inspiraatiota Aasian
+                            jylhistä maisemista ja budhalaisuuden pysähtyneestä sielunmaisemasta.
+                            <br>
+                            <br>
+                            Valmistuessaan kuva sai osakseen kiinnostusta myös Blender-yhteisössä.
                         </p>
                     </div>
                     <div class="contentElement hoverImage">
                         <img  src="../portfolio/images/JPGs/Budha.jpg" alt="Budha">
-                        <span><img id="budha"  src="../portfolio/images/JPGs/Budha.jpg"alt="Budha">
+                        <span><img id="budha"  src="../portfolio/images/JPGs/Budha.jpg" onmouseover="mOver(budha)" onmouseout="mOut(budha)" alt="Budha">
+                            <div class="videoProgress">
+                                <div class="progression"></div>
+                            </div>
                         </span>
                     </div>
                 </div>
@@ -542,14 +550,26 @@
                     </div>
                     <div class="contentElement">
                         <p>
-                            Valvontaohjelma
+                            Valvontaohjelma on yhteisprojekti veljeni Aki Ali-Vehmaan kanssa, jossa raspberry pi
+                            ohjelmoidaan toimimaan serverinä Telegram-botille. Hyväksytyt käyttäjät
+                            voivat antaa tälle botille erilaisia käskyjä, joita raspeberry pi toteuttaa.
+                            <br>
+                            <br>
+                            Projektin lähtöideana oli toteuttaa oma kodinvalvontametodi, jossa raspberryn
+                            kiinnitetään kamera, joka kuvaa tasaisin väliajoin haluttua kohdetta esimerkiksi
+                            ulko-ovea. Jos ovella tapahtuu riittävä muutos, pi lähettää viestiä aiheesta hälytyksen.
+                            Ohjelman toimiessa Telegram-botin rajapinnan kautta, pienentää ohjelmaan liittyviä
+                            tietoturvaongelmia. Ohjelma on tarkoitus julkaista Githubiin, kun valvontametodi toimii
+                            moitteettomasti.
+                            <br>
+                            <br>
+                            Ohjelma ei rajoita operaatioita vain valvontametodiin, vaan
+                            muita toiminnallisuuksia on mahdollista lisätä käskyvalikoimaan.
+
                         </p>
+
                     </div>
-                    <div class="contentElement hoverImage">
-                        <img  src="../portfolio/images/JPGs/kypara.jpg" alt="kypara">
-                        <span><img  src="../portfolio/images/JPGs/kypara.jpg"alt="kypara">
-                        </span>
-                    </div>
+
                 </div>
                 <div class="21thLayer content">
                     <div class="contentElement timedate">
@@ -559,7 +579,13 @@
                     </div>
                     <div class="contentElement">
                         <p>
-                            Rooma-Demo
+                            Rooma-Demo on myös yhteistyöprojekti ystäväni Olli Arkon kanssa.
+                            Demon tarkoitus oli kehittää taitoja Unity-pelimoottorin kanssa,
+                            mutta myös pohtia kiinnostavia elementtejä pelimaailmassa. Tuloksena
+                            syntyi kaupunkisimulaatioidea, jossa keskitytään enemmän populaation
+                            välisiin sosiaalisiin rakenteisiin populaation kasvaessa kuin itse
+                            kaupunkisuunnitteluun. Erityisesti meitä kiinnosti, miten populaation
+                            kasvaessa, eri sosiaaliset ryhmät muodostuvat dynaamisesti.
                         </p>
                     </div>
                     <div class="contentElement hoverImage">
@@ -604,14 +630,67 @@
                     </div>
                     <div class="contentElement">
                         <p>
-                            Slicer
+                            Slicer ohjelma on omaa käsialaani. Ohjelma koostuu kollaasista python skriptejä,
+                            jotka toimivat yhdessä Blender-sovelluksen kanssa. Loin skriptit helpottamaan alla
+                            esiteltyjä design-projekteja. Projektit sisälsivät usein kymmenistä osista reiluun
+                            sataan osaan, joiden järjestely ja käsittely käsin oli hyvin aikaavievää.
                         </p>
+                        <br>
+                        <br>
+                        <div class="contentElement hoverImage">
+                            <img  src="../portfolio/images/JPGs/mehilainen2.jpg" alt="mehilainen2">
+                            <span><img  src="../portfolio/images/JPGs/mehilainen2.jpg"alt="mehilainen2">
+                            </span>
+                        </div>
+                        <p>
+                            Ohjelma ratkaisee kokoamiseen liittyviä ongelmia monella tavalla.
+                            Ohjelma nimeää osat kerroksittain siten, että samalla kerroksella olevat osat
+                            saavat saman etuliitenumeron, mutta identifioivan jälkiliitenumeron esimerkiksi
+                            42.1 ja 42.2. Nämä numerot myöhemmin kaiverretaan osiin, jonka jälkeen osien
+                            lajittelu ja järjesteleminen on yksinkertaista.
+                        </p>
+                        <br>
+                        <br>
+                        <div class="contentElement hoverImage">
+                            <img  src="../portfolio/images/JPGs/sienileikkuu.jpg" alt="sienileikkuu">
+                            <span><img  src="../portfolio/images/JPGs/sienileikkuu.jpg"alt="sienileikkuu">
+                            </span>
+                        </div>
+                        <p>
+                            Toinen tapa, jolla ohjelma helpottaa
+                            kokoamista on apuviivat, jotka ohjelma kaivertaa edelliseen osaan. Lopulliseen
+                            osaan tulee siis kaiverrus seuraavan osan sijainnista edelliseen. Tämä helpottaa
+                            ja täsmentää huomattavasti kokoamisprosessia ja mahdollistaa mieleivaltaisen
+                            leikkuukulman, mikä oli aiemmin käytännössä mahdotonta.
+                        </p>
+                        <div class="contentElement hoverImage">
+                            <img  src="../portfolio/images/JPGs/sieni5.jpg" alt="sieni5">
+                            <span><img  src="../portfolio/images/JPGs/sieni5.jpg"alt="sieni5">
+                            </span>
+                        </div>
+                        <div class="contentElement">
+                            <video controls preload="none" poster="../portfolio/images/JPGs/slicer2Cover.jpg">
+                            <source src="../portfolio/images/Videos/Slicer2.mp4" type="video/mp4" >
+                            Selain ei tue tätä videota.
+                            </video>
+                        </div>
+                        <br>
+                        <br>
+                        <p>
+                            Ohjelma ratkaisee myös yhden keskeisen ongelman kappaleiden kanssa,
+                            missä on monia liitoskohtia. Kappaleet ovat moninpaikoin rakenteeltaan sellaisia,
+                            että kohdistuskappaleita ei voi lisätä, jolloin osan liimaaminen toiseen aiheuttaa
+                            helposti virhettä, joka kumuloituu osien määrän kasvaessa.
+                        </p>
+                        <div class="contentElement">
+                            <video controls preload="none" poster="../portfolio/images/JPGs/slicer1Cover.jpg">
+                            <source src="../portfolio/images/Videos/Slicer1.mp4" type="video/mp4" >
+                            Selain ei tue tätä videota.
+                            </video>
+                        </div>
                     </div>
-                    <div class="contentElement hoverImage">
-                        <img  src="../portfolio/images/JPGs/kypara.jpg" alt="kypara">
-                        <span><img  src="../portfolio/images/JPGs/kypara.jpg"alt="kypara">
-                        </span>
-                    </div>
+
+
                 </div>
             </div>
             <br>
